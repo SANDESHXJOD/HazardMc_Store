@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>HazardMc | Store</title>
+<link rel="icon" href="favicon.png" />
+<style>
+  :root{
+    --gold:#E0B11E; --accent:#06b06b; --bg:#0b0b0d; --card:#0f1113; --muted:#aaa;
+  }
+  *{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+  body{margin:0;background:linear-gradient(180deg,#050505 0%, #0b0b0d 100%);color:#fff;min-height:100vh}
+  .container{max-width:1080px;margin:28px auto;padding:20px}
+  header{display:flex;align-items:center;gap:16px}
+  .logo{display:flex;flex-direction:column;line-height:0.9}
+  .logo h1{margin:0;font-size:22px;color:var(--gold);letter-spacing:0.5px;font-weight:800}
+  .logo p{margin:0;color:var(--muted);font-size:12px}
+  nav{margin-left:auto}
+  nav a{color:var(--muted);text-decoration:none;margin-left:12px;font-size:14px}
+  .hero{display:flex;gap:24px;align-items:center;margin-top:28px}
+  .hero .left{flex:1}
+  .badge{display:inline-block;background:rgba(255,255,255,0.04);padding:6px 10px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px}
+  h2{font-size:34px;margin:8px 0 6px}
+  p.lead{color:var(--muted);margin:0 0 18px}
+  .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+  .btn-primary{background:linear-gradient(90deg,var(--gold),#f0d37a);color:#000;margin-right:10px}
+  .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+  .right{width:320px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+  .items{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px}
+  .item{background:var(--card);padding:14px;border-radius:10px;min-height:120px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid rgba(255,255,255,0.03)}
+  .item h3{margin:0 0 6px;font-size:18px}
+  .price{font-weight:900;color:var(--gold);font-size:18px}
+  .small{font-size:13px;color:var(--muted)}
+  footer{margin:28px 0;color:var(--muted);font-size:13px;text-align:center}
+  @media(max-width:880px){ .hero{flex-direction:column}.right{width:100%} }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">
+      <h1>HAZARD§lMC</h1>
+      <p>Season 1 · Lifesteal</p>
+    </div>
+    <nav>
+      <a href="#store">Store</a>
+      <a href="#perks">Perks</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="left">
+      <span class="badge">Official Store</span>
+      <h2>Join the grind — buy ranks & perks</h2>
+      <p class="lead">Fast delivery via Discord. Secure payments with PayPal/UPI/Ko-fi. Joins, ranks, cosmetics — sab yahin milega.</p>
+      <a class="btn btn-primary" href="#store">Shop Now</a>
+      <a class="btn btn-ghost" href="https://discord.gg/Hmx5VPBg" target="_blank">Join Discord</a>
+
+      <div class="items" id="store" style="margin-top:18px;">
+        <div class="item">
+          <div>
+            <h3>VIP Rank</h3>
+            <div class="small">Priority kit, custom tag</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div>
+              <div class="price">Rs. 150</div>
+              <div class="small">One-time</div>
+            </div>
+            <div>
+              <a class="btn btn-primary" href="https://paypal.me/YOUR" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <h3>Elite Rank</h3>
+            <div class="small">Rank+Chest+Monthly crate</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div>
+              <div class="price">Rs. 350</div>
+              <div class="small">One-time</div>
+            </div>
+            <div>
+              <a class="btn btn-primary" href="https://ko-fi.com/YOUR" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div>
+            <h3>Cosmetic Bundle</h3>
+            <div class="small">Tag+Particle+Custom prefix</div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+            <div>
+              <div class="price">Rs. 120</div>
+              <div class="small">One-time</div>
+            </div>
+            <div>
+              <a class="btn btn-primary" href="https://paypal.me/YOUR" target="_blank">Buy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="perks" style="margin-top:20px">
+        <h3 style="margin:10px 0 6px">Perks & Delivery</h3>
+        <p class="small">Payment received → Auto/Manual delivery via Discord DM. Agar auto setup chahiye to webhooks ya bot use karo (Discord bot to send roles).</p>
+      </div>
+
+    </div>
+
+    <aside class="right">
+      <div class="card">
+        <h3 style="margin-top:0">Server Info</h3>
+        <p class="small">IP: <strong>play.hazardmc.xyz</strong></p>
+        <p class="small">Mode: Lifesteal · S-1</p>
+        <p class="small">Support: <a href="https://discord.gg/Hmx5VPBg" target="_blank">Discord</a></p>
+        <hr style="opacity:0.06;margin:12px 0"/>
+        <p class="small">Delivery: Manual within 10 min (usually instant). Payment methods: PayPal / Ko-fi / UPI.</p>
+      </div>
+
+      <div style="height:12px"></div>
+
+      <div class="card">
+        <h4 style="margin:0 0 8px">FAQ</h4>
+        <div class="small"><strong>Q:</strong> How to get rank?<br><strong>A:</strong> Pay → Send proof in Discord → Role assigned.</div>
+      </div>
+    </aside>
+  </section>
+
+  <footer>
+    © HazardMC · Made with ❤️ — <a href="https://discord.gg/Hmx5VPBg" style="color:#E0B11E;text-decoration:none;">Join our Discord</a>
+  </footer>
+</div>
+</body>
+</html>
